@@ -1,0 +1,127 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  h1, h2 {
+    color: #333;
+  }
+  
+  form {
+    margin-bottom: 20px;
+  }
+  
+  /* Form Styling */
+  label {
+    font-size: 1.1em;
+    margin-right: 10px;
+  }
+  
+  input[type="number"] {
+    padding: 5px;
+    font-size: 1em;
+    width: 50px;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Seat Layout Styling */
+  #coach {
+    display: grid;
+    grid-template-columns: repeat(7, 50px);
+    grid-gap: 10px;
+    margin-top: 20px;
+  }
+  
+  /* Seat Styling */
+  .seat {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #28a746;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .seat.booked {
+    background-color: #db3846;
+    cursor: not-allowed;
+  }
+  
+  .seat.available:hover {
+    background-color: #218838;
+  }
+  
+  /* Styling for last row with 3 seats */
+  #coach div:nth-child(79),
+  #coach div:nth-child(80),
+  #coach div:nth-child(81) {
+    grid-column: span 2;
+    grid-gap: 15px;
+  }
+  
+  /* Responsive layout */
+  @media (max-width: 600px) {
+    #coach {
+      grid-template-columns: repeat(4, 50px);
+    }
+    
+    button {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+
+
+
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  #booking-form {
+    margin-bottom: 20px;
+  }
+  
+  .seat {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    text-align: center;
+    line-height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .available {
+    background-color: #c8e6c9; /* Light green for available seats */
+  }
+  
+  .booked {
+    background-color: #ffcdd2; /* Light red for booked seats */
+    color: #d32f2f; /* Dark red text for booked seats */
+  }
+  
